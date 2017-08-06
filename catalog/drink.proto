@@ -15,20 +15,23 @@ message Drink {
 }
 
 message Category {
-    string name = 1;
-    Category parent_category = 2;
-    repeated Category child_category = 3;
-    repeated PropertyType property_type = 4;
+    int32 id = 1;
+    string name = 2;
+    Category parent_category = 3;
+    repeated Category child_category = 4;
+    repeated PropertyType property_type = 5;
 }
 
 message PropertyType {
-    string name = 1;
-    ValueType type = 2;
+    int32 id = 1;
+    string name = 2;
+    ValueType type = 3;
 }
 
 message Property {
-    PropertyType propertyType = 1;
-    string value = 2;
+    int32 id = 1;
+    PropertyType propertyType = 2;
+    string value = 3;
 }
 
 enum ValueType {
