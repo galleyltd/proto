@@ -10,16 +10,16 @@ message Drink {
     int32 id = 1;
     string name = 2;
     Category category = 3;
-    repeated Property property = 4;
-    repeated string image_url = 5;
+    repeated Property properties = 4;
+    repeated string image_urls = 5;
 }
 
 message Category {
     int32 id = 1;
     string name = 2;
     Category parent_category = 3;
-    repeated Category child_category = 4;
-    repeated PropertyType property_type = 5;
+    repeated Category child_categories = 4;
+    repeated PropertyType property_types = 5;
 }
 
 message PropertyType {
@@ -35,8 +35,9 @@ message Property {
 }
 
 enum ValueType {
-    INT = 0;
-    FLOAT = 1;
-    STRING = 2;
-    BOOLEAN = 3;
+    INT32 = 0;
+    INT64 = 1;
+    FLOAT = 2;
+    STRING = 3;
+    BOOLEAN = 4;
 }

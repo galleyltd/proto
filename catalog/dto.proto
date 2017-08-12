@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package catalog;
+
+import "catalog/drink.proto";
+
+option java_multiple_files = true;
+option java_package = "io.prodrink.catalog.dto";
+option java_outer_classname = "DrinkDtoOuter";
+
+message DrinkRequest {
+    string drink_id = 1;
+}
+
+message DrinkPageRequest {
+    string user_id = 1;
+    int32 page_number = 2;
+    int32 per_page = 3;
+}
+
+message DrinkCreationResponse {
+    string created_drink_id = 1;
+}
+
+message DrinkUpdateRequest {
+    string drink_id = 1;
+    Drink drink = 2;
+}
+
+message DrinkUpdateResponse {}
+
+message DrinkDeletionRequest {
+    string drink_id = 1;
+}
+
+message DrinkDeletionResponse {}
