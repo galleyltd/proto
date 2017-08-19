@@ -12,6 +12,7 @@ message Drink {
     Category category = 3;
     repeated Property properties = 4;
     repeated string image_urls = 5;
+    string description = 6;
 }
 
 message Category {
