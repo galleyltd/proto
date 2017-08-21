@@ -19,8 +19,7 @@ message Category {
     int32 id = 1;
     string name = 2;
     Category parent_category = 3;
-    repeated Category child_categories = 4;
-    repeated PropertyType property_types = 5;
+    repeated PropertyType property_types = 4;
 }
 
 message PropertyType {
