@@ -7,6 +7,7 @@ import "catalog/drink.proto";
 option java_multiple_files = true;
 option java_package = "io.prodrink.catalog.dto";
 option java_outer_classname = "DrinkDtoOuter";
+option csharp_namespace = "prodrink.catalog";
 
 message DrinkRequest {
     int32 drink_id = 1;

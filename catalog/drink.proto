@@ -5,6 +5,7 @@ package catalog;
 option java_multiple_files = true;
 option java_package = "io.prodrink.catalog.domain";
 option java_outer_classname = "DrinkOuter";
+option csharp_namespace = "prodrink.catalog";
 
 message Drink {
     int32 id = 1;

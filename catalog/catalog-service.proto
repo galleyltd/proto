@@ -8,6 +8,7 @@ import "catalog/dto.proto";
 option java_multiple_files = true;
 option java_package = "io.prodrink.catalog.service";
 option java_outer_classname = "CatalogServiceOuter";
+option csharp_namespace = "prodrink.catalog";
 
 service CatalogService {
     rpc getDrinksById (stream DrinkRequest) returns (stream Drink);
