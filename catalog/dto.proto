@@ -20,6 +20,13 @@ message DrinkPageRequest {
     int32 per_page = 3;
 }
 
+message TopLevelCategoriesRequest {}
+
+message DrinksFromCategoryRequest {
+    int32 category_id = 1;
+    string user_id = 2;
+}
+
 message DrinkCreationResponse {
     int32 created_drink_id = 1;
 }

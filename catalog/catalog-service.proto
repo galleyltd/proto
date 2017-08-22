@@ -11,8 +11,11 @@ option java_outer_classname = "CatalogServiceOuter";
 option csharp_namespace = "prodrink.catalog";
 
 service CatalogService {
-    rpc getDrinksById (stream DrinkRequest) returns (stream Drink);
+    rpc getDrinkById (DrinkRequest) returns (Drink);
     rpc getDrinksPage (DrinkPageRequest) returns (stream Drink);
+
+    rpc getTopLevelCategories (TopLevelCategoriesRequest) returns (stream Category);
+    rpc getDrinksFromCategory (DrinksFromCategoryRequest) returns (stream Drink);
 }
 
 service AdminCatalogService {
