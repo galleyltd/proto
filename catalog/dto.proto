@@ -14,17 +14,13 @@ message DrinkRequest {
     string user_id = 2;
 }
 
-message DrinkPageRequest {
-    string user_id = 1;
-    int32 page_number = 2;
-    int32 per_page = 3;
-}
-
 message TopLevelCategoriesRequest {}
 
 message DrinksFromCategoryRequest {
     int32 category_id = 1;
-    string user_id = 2;
+    int32 page_number = 2;
+    int32 per_page = 3;
+    string user_id = 4;
 }
 
 message DrinkCreationResponse {
