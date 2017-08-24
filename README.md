@@ -1,3 +1,3 @@
 # proto
 
-Repo for protocol-buffers definitions
+Repo for protocol-buffers definitions.
