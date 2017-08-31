@@ -35,7 +35,8 @@ message DrinkUpdateRequest {
 message CategoryCreationRequest {
     string name = 1;
     int32 parent_category_id = 2;
-    string image_url = 3;
+    repeated PropertyType property_types = 3;
+    string image_url = 4;
 }
 
 message CategoryUpdateRequest {
@@ -65,6 +66,7 @@ message PropertyTypeCreationRequest {
 
 message PropertyTypeUpdateRequest {
     int32 property_type_id = 1;
-    string name = 2;
-    ValueType type = 3;
+    int32 category_id = 2;
+    string name = 3;
+    ValueType type = 4;
 }
