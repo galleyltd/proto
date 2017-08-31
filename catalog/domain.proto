@@ -32,7 +32,7 @@ message PropertyType {
 
 message Property {
     int32 id = 1;
-    PropertyType propertyType = 2;
+    PropertyType property_type = 2;
     string value = 3;
 }
 

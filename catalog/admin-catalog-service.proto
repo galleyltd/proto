@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package catalog;
+
+import "catalog/domain.proto";
+import "catalog/admin-dto.proto";
+
+option java_multiple_files = true;
+option java_package = "io.prodrink.catalog.generated.service";
+option java_outer_classname = "AdminCatalogServiceOuter";
+option csharp_namespace = "prodrink.catalog";
+
+service AdminDrinkService {
+    rpc createDrink(DrinkCreationRequest) returns (AdminServiceCallResponse);
+    rpc updateDrinkFields(DrinkUpdateRequest) returns (AdminServiceCallResponse);
+    rpc deleteDrink(DeletionRequest) returns (AdminServiceCallResponse);
+}
+
+service AdminCategoryService {
+    rpc createCategory(CategoryCreationRequest) returns (AdminServiceCallResponse);
+    rpc updateCategory(CategoryUpdateRequest) returns (AdminServiceCallResponse);
+    rpc deleteCategory(DeletionRequest) returns (AdminServiceCallResponse);
+}
+
+service AdminPropertyService {
+    rpc createPropertyType(PropertyTypeCreationRequest) returns (AdminServiceCallResponse);
+    rpc updatePropertyType(PropertyTypeUpdateRequest) returns (AdminServiceCallResponse);
+    rpc deletePropertyType(DeletionRequest) returns (AdminServiceCallResponse);
+
+    rpc addPropertiesToDrink(PropertyCreationRequest) returns (AdminServiceCallResponse);
+    rpc updateProperty(PropertyUpdateRequest) returns (AdminServiceCallResponse);
+    rpc deleteProperty(DeletionRequest) returns (AdminServiceCallResponse);
+}

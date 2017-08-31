@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package catalog;
 
-import "catalog/drink.proto";
+import "catalog/domain.proto";
 
 option java_multiple_files = true;
 option java_package = "io.prodrink.catalog.generated.dto";
@@ -23,19 +23,10 @@ message DrinksFromCategoryRequest {
     string user_id = 4;
 }
 
-message DrinkCreationResponse {
-    int32 created_drink_id = 1;
+message ChildCategoriesRequest {
+    int32 category_id = 1;
 }
 
-message DrinkUpdateRequest {
-    int32 drink_id = 1;
-    Drink drink = 2;
+message PropertyTypesInCategoryRequest {
+    int32 category_id = 1;
 }
-
-message DrinkUpdateResponse {}
-
-message DrinkDeletionRequest {
-    int32 drink_id = 1;
-}
-
-message DrinkDeletionResponse {}
