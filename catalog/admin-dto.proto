@@ -25,11 +25,11 @@ message DrinkCreationRequest {
 
 message DrinkUpdateRequest {
     int32 drink_id = 1;
-    string new_name = 2;
-    int32 new_category_id = 3;
-    repeated int32 new_property_ids = 4;
-    repeated string new_image_urls = 5;
-    string new_description = 6;
+    string name = 2;
+    int32 category_id = 3;
+    repeated int32 property_ids = 4;
+    repeated string image_urls = 5;
+    string description = 6;
 }
 
 message CategoryCreationRequest {
@@ -40,6 +40,10 @@ message CategoryCreationRequest {
 
 message CategoryUpdateRequest {
     int32 category_id = 1;
+    string name = 2;
+    int32 parent_category_id = 3;
+    repeated PropertyType property_types = 4;
+    string image_url = 5;
 }
 
 message PropertyCreationRequest {
@@ -50,7 +54,7 @@ message PropertyCreationRequest {
 
 message PropertyUpdateRequest {
     int32 property_id = 1;
-    string new_value = 2;
+    string value = 2;
 }
 
 message PropertyTypeCreationRequest {
@@ -61,6 +65,6 @@ message PropertyTypeCreationRequest {
 
 message PropertyTypeUpdateRequest {
     int32 property_type_id = 1;
-    string new_name = 2;
-    ValueType new_type = 3;
+    string name = 2;
+    ValueType type = 3;
 }
