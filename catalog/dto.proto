@@ -14,7 +14,7 @@ message DrinkRequest {
     string user_id = 2;
 }
 
-message TopLevelCategoriesRequest {}
+message CategoryTreeRequest {}
 
 message DrinksFromCategoryRequest {
     int32 category_id = 1;
@@ -23,10 +23,12 @@ message DrinksFromCategoryRequest {
     string user_id = 4;
 }
 
-message ChildCategoriesRequest {
-    int32 category_id = 1;
+message CategoryTree {
+    repeated CategoryNode top_category_nodes = 1;
 }
 
-message PropertyTypesInCategoryRequest {
-    int32 category_id = 1;
+message CategoryNode {
+    CategoryNode parent = 1;
+    repeated CategoryNode children = 2;
+    Category value = 3;
 }

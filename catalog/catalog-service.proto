@@ -12,10 +12,6 @@ option csharp_namespace = "prodrink.catalog";
 
 service CatalogService {
     rpc getDrinkById (DrinkRequest) returns (Drink);
-    rpc getTopLevelCategories (TopLevelCategoriesRequest) returns (stream Category);
+    rpc getCategoryTree (CategoryTreeRequest) returns (CategoryTree);
     rpc getDrinksFromCategory (DrinksFromCategoryRequest) returns (stream Drink);
-    rpc getChildCategories(ChildCategoriesRequest) returns (stream Category);
-
-    // will return property types for current category and for all parent categories
-    rpc getPropertyTypes(PropertyTypesInCategoryRequest) returns (stream PropertyType);
 }

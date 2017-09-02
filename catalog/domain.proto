@@ -19,7 +19,6 @@ message Drink {
 message Category {
     int32 id = 1;
     string name = 2;
-    Category parent_category = 3;
     repeated PropertyType property_types = 4;
     string image_url = 5;
 }
