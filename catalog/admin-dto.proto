@@ -6,7 +6,7 @@ import "catalog/domain.proto";
 
 option java_multiple_files = true;
 option java_package = "io.prodrink.catalog.generated.dto";
-option java_outer_classname = "DrinkDtoOuter";
+option java_outer_classname = "AdminDrinkDtoOuter";
 option csharp_namespace = "prodrink.catalog";
 
 message AdminServiceCallResponse {}

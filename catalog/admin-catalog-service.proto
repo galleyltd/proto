@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package catalog;
 
-import "catalog/domain.proto";
 import "catalog/admin-dto.proto";
 
 option java_multiple_files = true;
