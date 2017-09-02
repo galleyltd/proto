@@ -30,5 +30,11 @@ message CategoryTree {
 message CategoryNode {
     CategoryNode parent = 1;
     repeated CategoryNode children = 2;
-    Category value = 3;
+    CategoryDto value = 3;
+}
+
+message CategoryDto {
+    int32 id = 1;
+    string name = 2;
+    string image_url = 3;
 }
