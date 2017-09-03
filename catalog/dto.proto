@@ -28,7 +28,7 @@ message CategoryTree {
 }
 
 message CategoryNode {
-    CategoryNode parent = 1;
+    int32 parent_id = 1;
     repeated CategoryNode children = 2;
     CategoryDto value = 3;
 }
